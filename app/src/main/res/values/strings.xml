@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">豆瓣电影</string>
+    <string name="tab_home">首页</string>
+    <string name="tab_intheaters">热映</string>
+    <string name="search_hint">搜索电影内容</string>
+    <string name="more">更多</string>
+    <string name="about">关于</string>
+    <string name="douban_rating">豆瓣评分</string>
+    <string name="wish_watch">%s人想看</string>
+    <string name="watched">%s人看过</string>
+    <string name="movie_info">年份：%1$s\n原名：%2$s\n类型：%3$s\n国家：%4$s</string>
+    <string name="movie_summary">简介\n%1$s</string>
+    <string name="search_error">
+        <Data><![CDATA[<font><h3>搜索发生错误</h3></font><font><h1>请点击重试尝试搜索</h1></font>]]></Data>
+    </string>
+    <string name="input_city_name">请输入城市名</string>
+    <string name="change_city">切换城市</string>
+    <string name="change_city_tip">点击可切换城市</string>
+
+</resources>
