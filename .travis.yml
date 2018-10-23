@@ -1,0 +1,25 @@
+#构建语言
+language: android
+#配置信息
+android:
+  components:
+    - build-tools-27.0.3
+    - android-28
+    - extra-android-m2repository
+    - extra-android-support
+
+script:
+  - ./gradlew assembleRelease
+
+before_deploy:
+  - ls app/build/outputs/apk/
+
+deploy:
+  provider: releases
+  api_key:
+    secure: ${GH_TOKEN}
+  file: app/build/outputs/apk/app-release-unsigned.apk
+  skip_cleanup: true
+  on:
+    tags: true
+
