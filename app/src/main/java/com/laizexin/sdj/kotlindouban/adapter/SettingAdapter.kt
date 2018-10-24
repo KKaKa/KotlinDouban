@@ -23,7 +23,7 @@ class SettingAdapter(context : Context,data : MutableList<String>) : RecyclerVie
         this.mData = data
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): MySettingViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MySettingViewHolder {
         val v = LayoutInflater.from(parent!!.context).inflate(R.layout.item_setting,parent,false)
         return MySettingViewHolder(v)
     }
@@ -32,11 +32,11 @@ class SettingAdapter(context : Context,data : MutableList<String>) : RecyclerVie
         return mData.size
     }
 
-    override fun onBindViewHolder(holder: MySettingViewHolder?, position: Int) {
+    override fun onBindViewHolder(holder: MySettingViewHolder, position: Int) {
         holder!!.textView.text = mData.get(position)
     }
 
-    class MySettingViewHolder(itemView: View?) : RecyclerView.ViewHolder(itemView) {
+    class MySettingViewHolder(itemView: View?) : RecyclerView.ViewHolder(itemView!!) {
         val textView = itemView!!.findViewById<TextView>(R.id.tv)!!
     }
 }

@@ -8,12 +8,12 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.View
-import com.laizexin.sdj.kotlindouban.contract.presenter.MoviePresenter
-import com.laizexin.sdj.kotlindouban.contract.presenter.MoviePresenterImpl
-import com.laizexin.sdj.kotlindouban.contract.view.MovieView
 import com.laizexin.sdj.kotlindouban.R
 import com.laizexin.sdj.kotlindouban.adapter.MoviesAdapter
 import com.laizexin.sdj.kotlindouban.bean.Movie
+import com.laizexin.sdj.kotlindouban.contract.presenter.MoviePresenter
+import com.laizexin.sdj.kotlindouban.contract.presenter.MoviePresenterImpl
+import com.laizexin.sdj.kotlindouban.contract.view.MovieView
 import com.laizexin.sdj.kotlindouban.utils.Utils
 import com.scwang.smartrefresh.header.BezierCircleHeader
 import com.scwang.smartrefresh.layout.footer.BallPulseFooter
@@ -100,7 +100,7 @@ class MovieFragment : BaseFragment(),MovieView, MoviesAdapter.OnHolderClickListe
                     .setEmptyView(iv_empty)
         }
         adapter!!.addDataAll(movie.subjects)
-        recycle_view.adapter.notifyDataSetChanged()
+        recycle_view.adapter!!.notifyDataSetChanged()
     }
 
     override fun getMoviesFail(errorMsg: String) {
