@@ -29,7 +29,6 @@ before_install:
   - echo "sdk.dir=$ANDROID_HOME" > local.properties
   - mkdir "$ANDROID_HOME/licenses" || true
   - cp ./android-sdk-licenses/* "$ANDROID_HOME/licenses/"
-  - echo yes | $ANDROID_HOME/tools/bin/sdkmanager "build-tools;27.0.3"
 
 before_script:
   - chmod +x gradlew
