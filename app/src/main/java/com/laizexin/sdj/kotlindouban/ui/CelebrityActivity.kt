@@ -6,6 +6,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
+import android.view.MenuItem
 import com.laizexin.sdj.kotlindouban.ActivityConstant
 import com.laizexin.sdj.kotlindouban.R
 import com.laizexin.sdj.kotlindouban.adapter.WorkAdapter
@@ -76,5 +77,11 @@ class CelebrityActivity : AppCompatActivity() , CelebrityView{
         return this
     }
 
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        when(item?.itemId){
+            android.R.id.home -> super.onBackPressed()
+        }
+        return super.onOptionsItemSelected(item)
+    }
 
 }
