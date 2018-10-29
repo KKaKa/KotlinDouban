@@ -37,15 +37,11 @@ before_install:
 - mkdir "$ANDROID_HOME/licenses" || true
 - cp ./licenses/* "$ANDROID_HOME/licenses/"
 
-lintOptions {
-    abortOnError false
-}
-
 before_script:
   - chmod +x gradlew
 
 script:
-  - ./gradlew build
+  - ./gradlew assembleRelease
 
 before_deploy:
   - ls app/build/outputs/apk/
