@@ -41,8 +41,8 @@ script:
   - ./gradlew assembleRelease
 
 before_deploy:
-  - ls app/build/outputs/apk/
-  - mv app/build/outputs/apk/app-release.apk app/build/outputs/apk/kotlinDb-release-unsigned.apk
+  - ls app/build/outputs/apk/release
+  - mv app/build/outputs/apk/release/app-release.apk app/build/outputs/apk/release/kotlinDb-release-unsigned.apk
 
 deploy:
   provider: releases
