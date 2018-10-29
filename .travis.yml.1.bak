@@ -45,7 +45,7 @@ before_script:
   - chmod +x gradlew
 
 script:
-  - ./gradlew assembleRelease
+  - ./gradlew build
 
 before_deploy:
   - ls app/build/outputs/apk/
