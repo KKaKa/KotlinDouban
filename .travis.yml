@@ -33,7 +33,6 @@ android:
 
 before_install:
 - yes | sdkmanager "platforms;android-28"
-- yes | sdkmanager --licenses --sdk_root=$ANDROID_HOME
 
 before_script:
   - chmod +x gradlew
