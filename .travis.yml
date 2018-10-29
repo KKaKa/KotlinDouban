@@ -42,7 +42,7 @@ script:
 
 before_deploy:
   - ls app/build/outputs/apk/
-  - cp app/build/outputs/apk/app-release.apk app-release-unsigned.apk
+  - mv app/build/outputs/apk/app-release.apk app/build/outputs/apk/kotlinDb-release-unsigned.apk
 
 deploy:
   provider: releases
