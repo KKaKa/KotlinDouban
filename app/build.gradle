@@ -11,7 +11,7 @@ keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 android {
     signingConfigs {
         releaseConfig {
-            storeFile file("F:/KotlinDouban/app/keyStore/my.jks")
+            storeFile file("F:/KotlinDouban/app/keyStore/my.jks")//
             storePassword keystoreProperties['KEYSTORE_PASS']
             keyAlias keystoreProperties['ALIAS_NAME']
             keyPassword keystoreProperties['ALIAS_PASS']
