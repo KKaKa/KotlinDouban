@@ -4,14 +4,17 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+def keystorePropertiesFile = rootProject.file("keystore.properties");
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 
 android {
     signingConfigs {
         releaseConfig {
-            storeFile file('F:/KotlinDouban/app/keyStore/my.jks')
-            storePassword project.hasProperty("KEYSTORE_PASS") ? KEYSTORE_PASS : System.getenv("KEYSTORE_PASS")
-            keyAlias project.hasProperty("ALIAS_NAME") ? ALIAS_NAME : System.getenv("ALIAS_NAME")
-            keyPassword project.hasProperty("ALIAS_PASS") ? ALIAS_PASS : System.getenv("ALIAS_PASS")
+            storeFile file("F:/KotlinDouban/app/keyStore/my.jks")
+            storePassword keystoreProperties['KEYSTORE_PASS']
+            keyAlias keystoreProperties['ALIAS_NAME']
+            keyPassword keystoreProperties['ALIAS_PASS']
         }
     }
     compileSdkVersion 28
