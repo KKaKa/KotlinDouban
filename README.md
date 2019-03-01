@@ -2,7 +2,7 @@
 用Kotlin写的豆瓣电影App
 
 - ## 由来
-  最新工作比较轻松，闲的无事，就想着通过一个项目来回顾一下Kotlin的基础点，于是写了这个Retrofit+okthhp+rxjava豆瓣电影的App。
+  最新工作比较轻松，闲的无事，就想着通过一个项目来回顾一下Kotlin的基础点，于是写了这个Retrofit+okhttp+rxjava豆瓣电影的App。
 
 - ## 功能
   - 电影TOP250
